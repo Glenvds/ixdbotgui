@@ -1,0 +1,31 @@
+<!-- <router-outlet></router-outlet> -->
+
+
+
+<div class="container">
+    <ng-container *ngIf="info">
+        <div class="row queue"
+             *ngFor="let request of info">
+
+            <div class="col-sm-6">
+                {{request.title}}
+
+            </div>
+
+            <div class="col-sm-auto">
+                <img style="max-width: 150px;"
+                     src={{request.requester.displayAvatarURL}} />
+
+            </div>
+
+            <div class="col-sm-grow">
+                {{request.requester.username}}
+
+            </div>
+
+        </div>
+
+        <!-- - {{request.requester.username}}</p> <img src={{request.requester.displayAvatarURL}} /> -->
+
+    </ng-container>
+</div>
