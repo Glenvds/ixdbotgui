@@ -10,6 +10,7 @@ import { IMusicData } from "../models/queue-info";
 export class AppComponent {
     title = 'ixbotgui';
     info: IMusicData[];
+    metadata: Date;
 
     constructor(private readonly apiService: ApiService) {
         this.loadData();
@@ -18,6 +19,7 @@ export class AppComponent {
     private loadData() {
         this.apiService.listenToInfoUpdate().subscribe(data => {
             this.info = data?.musicData;
+            this.metadata = data?.timestamp;
         });
     }
 }

@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 body {
-    background-color: black;
-    color: white;
+    background-color: #0e0e0e;
+    color: #fefefe;
 }
 
 .queue {
@@ -11,3 +11,30 @@ body {
 .container {
     max-width: unset !important;
 }
+body{margin-top:20px;}
+
+table.table .avatar {
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 10px;
+    width: 70px;
+    height: 70px;
+}
+
+
+table.table a{
+    color: #fefefe;
+}
+
+table.table{
+    color: #fefefe;
+}
+table.table td{
+    height: 80px;
+    line-height: 80px;
+}
+table.table td.currently_playing{
+    background-color: #cecece;
+    color: #0f0f0f;
+}
+
