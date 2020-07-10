@@ -27,15 +27,15 @@ export class ApiService {
     }
 
     getInfo$(): Observable<IBotState> {
-        const mock : IBotState = {timestamp: new Date(), musicData:[
+        /*const mock : IBotState = {timestamp: new Date(), musicData:[
             {title: 'Kendrick Lamar - Swimming Pools (Drank)', url:'www.whatever.com', requester:{displayAvatarURL:'https://www.talkwalker.com/images/2020/blog-headers/image-analysis.png', username: 'Koby'}},
             {title: 'Pharoahe Monch - Simon Says [High Quality]', url:'www.whatever', requester:{displayAvatarURL:'https://www.talkwalker.com/images/2020/blog-headers/image-analysis.png', username: 'Smolders'}},
             {title: 'ScHoolboy Q - Floating ft. 21 Savage', url:'www.whatever', requester:{displayAvatarURL:'https://www.talkwalker.com/images/2020/blog-headers/image-analysis.png', username: 'Gay Jerre'}},
             {title: 'NCT 127 엔시티 127 Simon Says MV', url:'www.whatever', requester:{displayAvatarURL:'https://www.talkwalker.com/images/2020/blog-headers/image-analysis.png', username: 'Karla'}},
-        ] }       
-        //return this.httpClient.get<IBotState>("http://192.168.0.100:8080/");
+        ] } */
+        return this.httpClient.get<IBotState>("http://192.168.0.100:8080/");
 
-        return of(mock)
+        //return of(mock)
     }
 
     listenToInfoUpdate(): Observable<IBotState> {
