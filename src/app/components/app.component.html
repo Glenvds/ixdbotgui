@@ -1,31 +1,70 @@
-<!-- <router-outlet></router-outlet> -->
-
-
-
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
+      rel="stylesheet">
 <div class="container">
-    <ng-container *ngIf="info">
-        <div class="row queue"
+  <div class="row header allign ">
+    <dIV class="col-lg-4" style="margin: auto">Last synced: {{metadata|  date:'fullTime' }}</dIV>
+
+
+    <dIV class="col-lg-8">
+      <p> WiFi info</p>
+
+
+    </dIV>
+
+  </div>
+
+  <div class="row">
+    <div class="col-lg-6" style="margin: auto">
+      <div class="main-box clearfix">
+
+        Last synced: {{metadata| date:'fullTime' }}
+
+        <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>Name</th>						
+                        <th>Request Title</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let request of info; let i = index ">
+                        <td [ngClass]="{'currently_playing': i === 0}">
+                           <img src={{request.requester.displayAvatarURL}} class="avatar" alt="Avatar" > {{request.requester.username}}</td>
+                        <td [ngClass]="{'currently_playing': i === 0}"><span *ngIf='i === 0'>Currently Playing:  </span>{{request.title}}                            </td>                        
+                        
+                    </tr>
+                   
+                </tbody>
+            </table>
+    <!--     <div class="row queue"
              *ngFor="let request of info">
+          <div class="col-sm-auto">
+            <img style="max-width: 150px;"
+                 src={{request.requester.displayAvatarURL}} />
 
-            <div class="col-sm-6">
-                {{request.title}}
+          </div>
 
-            </div>
+          <div class="col-sm-grow">
+            {{request.requester.username}}
 
-            <div class="col-sm-auto">
-                <img style="max-width: 150px;"
-                     src={{request.requester.displayAvatarURL}} />
+          </div>
 
-            </div>
+          <div class="col-sm-6">
+            {{request.title}}
 
-            <div class="col-sm-grow">
-                {{request.requester.username}}
+          </div>
 
-            </div>
 
-        </div>
+
+
+
+        </div> -->
 
         <!-- - {{request.requester.username}}</p> <img src={{request.requester.displayAvatarURL}} /> -->
 
-    </ng-container>
+
+
+      </div>
+    </div>
+  </div>
 </div>
